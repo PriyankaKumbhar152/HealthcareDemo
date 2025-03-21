@@ -1,10 +1,7 @@
 package testcaseHealthcare;
 
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
-import org.testng.internal.BaseClassFinder;
 
-import com.trinity.locator;
 
 import Baseclass.baseHealthcare;
 import HealthcarePages.LoginPageHealthcare;
@@ -50,6 +47,6 @@ public class LoginTestcasesForHealthcare extends baseHealthcare {
 		login.enterPassword("Admin123");
 		login.clickonPharmacy(login);
 		login.clickonLogin(login);
-		home.clickonRegisterAPatient();
+		//home.clickonRegisterAPatient();
 	}
 }

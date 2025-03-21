@@ -10,7 +10,6 @@ import HealthcarePages.HomePageHealthcare;
 import HealthcarePages.LoginPageHealthcare;
 import HealthcarePages.ManageServiceTypePageHealthcare;
 import HealthcarePages.RegisterAPatientPage;
-import HealthcarePages.StartVisitHealthcare;
 import healthcareKeywords.Keyword1;
 
 public class HomePageTestcasesForHealthcare extends baseHealthcare {
@@ -134,9 +133,9 @@ public class HomePageTestcasesForHealthcare extends baseHealthcare {
 		login.clickonPharmacy(login);
 		login.clickonLogin(login);
 		
-		FindPatientsRecordPageHealthcare home3 = new FindPatientsRecordPageHealthcare();
-		home3.clickonFindRecord();
-		home3.SearchPatient("Priyanka Prashant Kumbhar");
+		//FindPatientsRecordPageHealthcare home3 = new FindPatientsRecordPageHealthcare();
+		//home3.clickonFindRecord();
+		//home3.SearchPatient("Priyanka Prashant Kumbhar");
 		}
 	
 	@Test

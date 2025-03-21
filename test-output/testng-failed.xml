@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcaseHealthcare.AppointmentSchedulingTestcaseForHealthcare">
+      <class name="testcaseHealthcare.FindPatientRecordTestcaseForHealthcare">
         <methods>
           <include name="closeBrowser"/>
+          <include name="toVerifyThatAfterDisplayPatientRecordPageEditContactInfoOrNot"/>
           <include name="setup"/>
-          <include name="tobookAppoinment"/>
         </methods>
-      </class> <!-- testcaseHealthcare.AppointmentSchedulingTestcaseForHealthcare -->
+      </class> <!-- testcaseHealthcare.FindPatientRecordTestcaseForHealthcare -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

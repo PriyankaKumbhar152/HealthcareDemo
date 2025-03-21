@@ -9,20 +9,23 @@ import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotInteractableException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.UnexpectedTagNameException;
 import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import healthcareKeywords.Keyword1;
 
 public class ManageProviderSchedulePageHealthcare {
 
 	
-	@FindBy(xpath="//*[@id=\"appointmentschedulingui-scheduleProviders-app\"]")
+	@FindBy(xpath="//a[@id=\"appointmentschedulingui-scheduleProviders-app\"]")
 	public WebElement ManageProviderSchedule;
 	
 	@FindBy(xpath="//select[@ng-options=\"l.display for l in locations\"]")
@@ -43,15 +46,21 @@ public class ManageProviderSchedulePageHealthcare {
 	@FindBy(xpath="//a[text()='infection']")
     public WebElement Infection;
 	
-	public  ManageProviderSchedulePageHealthcare() {
+	public ManageProviderSchedulePageHealthcare() {
 		PageFactory.initElements(Keyword1.getDriver(), this);
 	}
 
-	public void clickonManageProviderSchedule() {
+	public void ManageProviderSchedule(Object driver) {
 	ManageProviderSchedule.click();	
+	 FluentWait wait = new FluentWait(driver);
+		wait.withTimeout(Duration.ofSeconds(15));
+	    wait.pollingEvery(Duration.ofMillis(1000));
+		wait.withMessage("waited to long but didnt appar");   
+	
+
 	}
     public void selectLocationList(Object Exceptions, Object driver)  {                                        //for location dropdown	
-    LocationList.sendKeys("");
+   // LocationList.sendKeys("");
     
      Select select = new Select(LocationList);                                                              //to handlemultidropdownlist 
     select.selectByVisibleText("");

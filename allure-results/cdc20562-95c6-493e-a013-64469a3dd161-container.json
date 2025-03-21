@@ -1,0 +1,1 @@
+{"uuid":"cdc20562-95c6-493e-a013-64469a3dd161","name":"Baseclass.baseHealthcare.setup","children":["8d6c4842-b87b-4037-ad0f-6fd588b33caf"],"description":"","befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1742538377518,"stop":1742538386992}],"afters":[],"start":1742538377518,"stop":1742538386994}

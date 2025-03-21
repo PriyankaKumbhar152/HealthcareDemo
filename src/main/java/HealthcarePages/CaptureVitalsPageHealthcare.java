@@ -15,6 +15,12 @@ public class CaptureVitalsPageHealthcare {
 	@FindBy(xpath="//input[@id=\"patient-search\"]")
 	public WebElement SearchName;
 	
+	@FindBy(xpath="//td[text()='Priyanka Prashant Kumbhar']")
+	public WebElement ClickOnName;
+	
+	@FindBy(xpath="//button[@class=\"cancel big\"]")
+	public WebElement FindAnotherPatient;
+	
 	 public CaptureVitalsPageHealthcare() {
      PageFactory.initElements(Keyword1.getDriver(),this);
 		} 
@@ -25,4 +31,11 @@ public class CaptureVitalsPageHealthcare {
 	public void SearchName(String text) {
 		SearchName.sendKeys(text);
 	}
+	public void ClickOnName() {
+		ClickOnName.click();
+	}
+	public void FindAnotherPatient() {
+		FindAnotherPatient.click();
+	}
+	
 }
